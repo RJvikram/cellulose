@@ -1,0 +1,1062 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:Request-{YYYY}-{MM}-{####}",
+ "creation": "2022-02-08 13:14:41.083327",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "email_append_to": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "contact_and_address_information_section",
+  "who_you_are",
+  "first_name",
+  "email_id",
+  "address_1",
+  "city",
+  "country",
+  "request_type",
+  "status",
+  "column_break_1",
+  "lead_owner",
+  "last_name",
+  "phone",
+  "address_2",
+  "state",
+  "postal_code",
+  "type",
+  "contact_info_tab",
+  "naming_series",
+  "middle_name",
+  "salutation",
+  "job_title",
+  "annual_revenue",
+  "industry",
+  "column_break_20",
+  "customer",
+  "lead_name",
+  "mobile_no",
+  "fax",
+  "market_segment",
+  "column_break_zpbu",
+  "phone_ext",
+  "gender",
+  "whatsapp_no",
+  "territory",
+  "no_of_employees",
+  "organization_section",
+  "company_name",
+  "website",
+  "column_break_28",
+  "registration_number",
+  "address_section",
+  "column_break_bvez",
+  "column_break_38",
+  "column_break2",
+  "contact_html",
+  "section_break_analytics",
+  "utm_source",
+  "utm_content",
+  "column_break_gkxo",
+  "utm_campaign",
+  "column_break_gqka",
+  "utm_medium",
+  "qualification_tab",
+  "qualification_status",
+  "column_break_64",
+  "qualified_by",
+  "qualified_on",
+  "other_info_tab",
+  "company",
+  "column_break_22",
+  "language",
+  "image",
+  "title",
+  "column_break_50",
+  "disabled",
+  "unsubscribed",
+  "blog_subscriber",
+  "services_we_offer_section",
+  "ceiling_insulation",
+  "existing_cellulose_removal",
+  "garage_small_area_only",
+  "wall_insulation",
+  "column_break_njbn",
+  "sound_attenuation_insulation",
+  "roof_vents",
+  "existing_batt_removal",
+  "floor_insulation",
+  "column_break_jyai",
+  "existing_foil_removal",
+  "existing_insulation_inspectionrepair",
+  "ceiling_vacuum",
+  "roof_type_section",
+  "cement_tile",
+  "corrugated_iron",
+  "column_break_flzc",
+  "metal_tile",
+  "cliiplok_flat_roof",
+  "column_break_orlv",
+  "asbestos_fibro_sheet",
+  "clay_tile",
+  "construction_type_section",
+  "high_set_home",
+  "manhole_with_good_access",
+  "multilevel_home",
+  "column_break_jbbx",
+  "low_set_home",
+  "raked_roof_areas",
+  "no_manhole_for_access",
+  "column_break_wyov",
+  "exposed_beam_areas",
+  "flat_roof",
+  "downlights_and_exhaust_fans_section",
+  "no_of_downlights",
+  "column_break_bvsm",
+  "no_of_exhaust_fans",
+  "additional_elements_on_roof_section",
+  "solar_panels_on_roof_that_has_no_manhole_access",
+  "difficult_truck_access_or_parking",
+  "no_power_on_site",
+  "column_break_fxbs",
+  "solar_hot_water_on_roof_with_no_manhole_access",
+  "house_is_more_than_30m_long_from_where_the_truck_would_park",
+  "downlights_or_exhaust_fans_with_difficult_to_access_areas",
+  "house_plan_or_photos_section",
+  "upload_file",
+  "remarks",
+  "assign_request_section",
+  "column_break_pzaz",
+  "assign_request_to",
+  "column_break_oymp",
+  "assign_installer",
+  "job_details_tab",
+  "schedule_date_and_time",
+  "end_job",
+  "tab_5_tab",
+  "report_section",
+  "job",
+  "activities_tab",
+  "open_activities_html",
+  "all_activities_section",
+  "all_activities_html",
+  "notes_tab",
+  "notes_html",
+  "notes",
+  "dashboard_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "oldfieldname": "naming_series",
+   "oldfieldtype": "Select",
+   "options": "CRM-LEAD-.YYYY.-",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "lead_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_global_search": 1,
+   "label": "Full Name",
+   "oldfieldname": "lead_name",
+   "oldfieldtype": "Data",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company Name",
+   "mandatory_depends_on": "eval: !(doc.first_name)",
+   "oldfieldname": "company_name",
+   "oldfieldtype": "Data"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email",
+   "oldfieldname": "email_id",
+   "oldfieldtype": "Data",
+   "options": "Email",
+   "search_index": 1
+  },
+  {
+   "default": "__user",
+   "fieldname": "lead_owner",
+   "fieldtype": "Link",
+   "label": "Lead Owner",
+   "oldfieldname": "lead_owner",
+   "oldfieldtype": "Link",
+   "options": "User",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Lead",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "oldfieldname": "status",
+   "oldfieldtype": "Select",
+   "options": "Lead\nOpen\nReplied\nOpportunity\nQuotation\nLost Quotation\nInterested\nConverted\nJob Scheduled\nDo Not Contact",
+   "read_only": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "salutation",
+   "fieldtype": "Link",
+   "label": "Salutation",
+   "options": "Salutation"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "depends_on": "eval:doc.source == 'Existing Customer'",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "From Customer",
+   "no_copy": 1,
+   "oldfieldname": "customer",
+   "oldfieldtype": "Link",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "contact_info_tab",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Contact Info"
+  },
+  {
+   "fieldname": "column_break2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_html",
+   "fieldtype": "HTML",
+   "label": "Contact HTML",
+   "read_only": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "oldfieldname": "contact_no",
+   "oldfieldtype": "Data",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No",
+   "oldfieldname": "mobile_no",
+   "oldfieldtype": "Data",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "fax",
+   "fieldtype": "Data",
+   "label": "Fax",
+   "oldfieldname": "fax",
+   "oldfieldtype": "Data"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Lead Type",
+   "oldfieldname": "type",
+   "oldfieldtype": "Select",
+   "options": "\nClient\nChannel Partner\nConsultant"
+  },
+  {
+   "fieldname": "market_segment",
+   "fieldtype": "Link",
+   "label": "Market Segment",
+   "oldfieldname": "market_segment",
+   "oldfieldtype": "Select",
+   "options": "Market Segment"
+  },
+  {
+   "fieldname": "industry",
+   "fieldtype": "Link",
+   "label": "Industry",
+   "oldfieldname": "industry",
+   "oldfieldtype": "Link",
+   "options": "Industry Type"
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "label": "Request Type",
+   "oldfieldname": "request_type",
+   "oldfieldtype": "Select",
+   "options": "\nProduct Enquiry\nRequest for Information\nSuggestions\nOther"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "oldfieldname": "company",
+   "oldfieldtype": "Link",
+   "options": "Company",
+   "remember_last_selected_value": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website URL",
+   "oldfieldname": "website",
+   "oldfieldtype": "Data"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Territory",
+   "oldfieldname": "territory",
+   "oldfieldtype": "Link",
+   "options": "Territory",
+   "print_hide": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "unsubscribed",
+   "fieldtype": "Check",
+   "label": "Unsubscribed"
+  },
+  {
+   "default": "0",
+   "fieldname": "blog_subscriber",
+   "fieldtype": "Check",
+   "label": "Blog Subscriber"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Title",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "label": "Print Language",
+   "options": "Language"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "mandatory_depends_on": "eval: !(doc.company_name)"
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "no_of_employees",
+   "fieldtype": "Select",
+   "label": "No of Employees",
+   "options": "1-10\n11-50\n51-200\n201-500\n501-1000\n1000+"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "whatsapp_no",
+   "fieldtype": "Data",
+   "label": "WhatsApp",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_50",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone_ext",
+   "fieldtype": "Data",
+   "label": "Phone Ext."
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "qualification_tab",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Qualification"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "notes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Comments"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "other_info_tab",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qualified_by",
+   "fieldtype": "Link",
+   "label": "Qualified By",
+   "options": "User"
+  },
+  {
+   "fieldname": "qualified_on",
+   "fieldtype": "Date",
+   "label": "Qualified on"
+  },
+  {
+   "fieldname": "qualification_status",
+   "fieldtype": "Select",
+   "label": "Qualification Status",
+   "options": "Unqualified\nIn Process\nQualified"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Address & Contacts"
+  },
+  {
+   "fieldname": "column_break_64",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Title"
+  },
+  {
+   "fieldname": "annual_revenue",
+   "fieldtype": "Currency",
+   "label": "Annual Revenue"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "activities_tab",
+   "fieldtype": "Tab Break",
+   "label": "Activities"
+  },
+  {
+   "fieldname": "organization_section",
+   "fieldtype": "Section Break",
+   "label": "Company Information"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes_html",
+   "fieldtype": "HTML",
+   "label": "Notes HTML"
+  },
+  {
+   "fieldname": "open_activities_html",
+   "fieldtype": "HTML",
+   "label": "Open Activities HTML"
+  },
+  {
+   "fieldname": "all_activities_section",
+   "fieldtype": "Section Break",
+   "label": "All Activities"
+  },
+  {
+   "fieldname": "all_activities_html",
+   "fieldtype": "HTML",
+   "label": "All Activities HTML"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Notes",
+   "no_copy": 1,
+   "options": "CRM Note"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "dashboard_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "column_break_gkxo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gqka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "utm_content",
+   "fieldtype": "Data",
+   "label": "Content",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "utm_source",
+   "fieldtype": "Link",
+   "label": "Source",
+   "oldfieldname": "source",
+   "oldfieldtype": "Select",
+   "options": "UTM Source"
+  },
+  {
+   "fieldname": "utm_medium",
+   "fieldtype": "Link",
+   "label": "Medium",
+   "options": "UTM Medium"
+  },
+  {
+   "fieldname": "utm_campaign",
+   "fieldtype": "Link",
+   "label": "Campaign",
+   "oldfieldname": "campaign_name",
+   "oldfieldtype": "Link",
+   "options": "UTM Campaign"
+  },
+  {
+   "fieldname": "section_break_analytics",
+   "fieldtype": "Section Break",
+   "label": "Analytics"
+  },
+  {
+   "fieldname": "who_you_are",
+   "fieldtype": "Select",
+   "label": "Who you are?",
+   "options": "Owner\nBuilder\nInvestment Property Broker\nRealestate Manager",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_and_address_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contact and Address Information"
+  },
+  {
+   "fieldname": "address_2",
+   "fieldtype": "Data",
+   "label": "Address 2"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "column_break_zpbu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number"
+  },
+  {
+   "fieldname": "column_break_bvez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "services_we_offer_section",
+   "fieldtype": "Section Break",
+   "label": "Services we offer"
+  },
+  {
+   "default": "0",
+   "fieldname": "ceiling_insulation",
+   "fieldtype": "Check",
+   "label": "Ceiling Insulation"
+  },
+  {
+   "default": "0",
+   "fieldname": "existing_cellulose_removal",
+   "fieldtype": "Check",
+   "label": "Existing Cellulose Removal"
+  },
+  {
+   "default": "0",
+   "fieldname": "garage_small_area_only",
+   "fieldtype": "Check",
+   "label": "Garage Small Area Only"
+  },
+  {
+   "default": "0",
+   "fieldname": "wall_insulation",
+   "fieldtype": "Check",
+   "label": "Wall Insulation"
+  },
+  {
+   "fieldname": "column_break_njbn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sound_attenuation_insulation",
+   "fieldtype": "Check",
+   "label": "Sound Attenuation Insulation"
+  },
+  {
+   "default": "0",
+   "fieldname": "roof_vents",
+   "fieldtype": "Check",
+   "label": "Roof Vents"
+  },
+  {
+   "default": "0",
+   "fieldname": "existing_batt_removal",
+   "fieldtype": "Check",
+   "label": "Existing Batt Removal"
+  },
+  {
+   "default": "0",
+   "fieldname": "floor_insulation",
+   "fieldtype": "Check",
+   "label": "Floor Insulation"
+  },
+  {
+   "fieldname": "column_break_jyai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "existing_foil_removal",
+   "fieldtype": "Check",
+   "label": "Existing Foil Removal"
+  },
+  {
+   "default": "0",
+   "fieldname": "existing_insulation_inspectionrepair",
+   "fieldtype": "Check",
+   "label": "Existing Insulation Inspection/Repair"
+  },
+  {
+   "default": "0",
+   "fieldname": "ceiling_vacuum",
+   "fieldtype": "Check",
+   "label": "Ceiling Vacuum"
+  },
+  {
+   "fieldname": "roof_type_section",
+   "fieldtype": "Section Break",
+   "label": "Roof Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "cement_tile",
+   "fieldtype": "Check",
+   "label": "Cement Tile"
+  },
+  {
+   "default": "0",
+   "fieldname": "corrugated_iron",
+   "fieldtype": "Check",
+   "label": "Corrugated Iron"
+  },
+  {
+   "fieldname": "column_break_flzc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "metal_tile",
+   "fieldtype": "Check",
+   "label": "Metal tile"
+  },
+  {
+   "default": "0",
+   "fieldname": "cliiplok_flat_roof",
+   "fieldtype": "Check",
+   "label": "CliipLok flat roof"
+  },
+  {
+   "fieldname": "column_break_orlv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "asbestos_fibro_sheet",
+   "fieldtype": "Check",
+   "label": "Asbestos Fibro sheet"
+  },
+  {
+   "default": "0",
+   "fieldname": "clay_tile",
+   "fieldtype": "Check",
+   "label": "Clay Tile"
+  },
+  {
+   "fieldname": "construction_type_section",
+   "fieldtype": "Section Break",
+   "label": "Construction Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "high_set_home",
+   "fieldtype": "Check",
+   "label": "High set home"
+  },
+  {
+   "default": "0",
+   "fieldname": "manhole_with_good_access",
+   "fieldtype": "Check",
+   "label": "Manhole with good access"
+  },
+  {
+   "default": "0",
+   "fieldname": "multilevel_home",
+   "fieldtype": "Check",
+   "label": "Multilevel home"
+  },
+  {
+   "fieldname": "column_break_jbbx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "low_set_home",
+   "fieldtype": "Check",
+   "label": "Low set home"
+  },
+  {
+   "default": "0",
+   "fieldname": "raked_roof_areas",
+   "fieldtype": "Check",
+   "label": "Raked Roof areas"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_manhole_for_access",
+   "fieldtype": "Check",
+   "label": "No Manhole for Access"
+  },
+  {
+   "fieldname": "column_break_wyov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "exposed_beam_areas",
+   "fieldtype": "Check",
+   "label": "Exposed Beam areas"
+  },
+  {
+   "default": "0",
+   "fieldname": "flat_roof",
+   "fieldtype": "Check",
+   "label": "Flat roof"
+  },
+  {
+   "fieldname": "downlights_and_exhaust_fans_section",
+   "fieldtype": "Section Break",
+   "label": "Downlights and Exhaust Fans"
+  },
+  {
+   "fieldname": "no_of_downlights",
+   "fieldtype": "Data",
+   "label": "No. of Downlights"
+  },
+  {
+   "fieldname": "column_break_bvsm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "no_of_exhaust_fans",
+   "fieldtype": "Data",
+   "label": "No. of Exhaust Fans"
+  },
+  {
+   "fieldname": "additional_elements_on_roof_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Elements on Roof"
+  },
+  {
+   "default": "0",
+   "fieldname": "solar_panels_on_roof_that_has_no_manhole_access",
+   "fieldtype": "Check",
+   "label": "Solar Panels on roof that has no manhole access"
+  },
+  {
+   "default": "0",
+   "fieldname": "difficult_truck_access_or_parking",
+   "fieldtype": "Check",
+   "label": "Difficult truck access or parking"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_power_on_site",
+   "fieldtype": "Check",
+   "label": "No power on site"
+  },
+  {
+   "fieldname": "column_break_fxbs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "solar_hot_water_on_roof_with_no_manhole_access",
+   "fieldtype": "Check",
+   "label": "Solar hot water on roof with no manhole access"
+  },
+  {
+   "default": "0",
+   "fieldname": "house_is_more_than_30m_long_from_where_the_truck_would_park",
+   "fieldtype": "Check",
+   "label": "House is more than 30m long from where the truck would park"
+  },
+  {
+   "default": "0",
+   "fieldname": "downlights_or_exhaust_fans_with_difficult_to_access_areas",
+   "fieldtype": "Check",
+   "label": "Downlights or Exhaust fans with difficult to access areas"
+  },
+  {
+   "fieldname": "house_plan_or_photos_section",
+   "fieldtype": "Section Break",
+   "label": "House Plan or Photos"
+  },
+  {
+   "fieldname": "upload_file",
+   "fieldtype": "Attach",
+   "label": "Upload File"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks "
+  },
+  {
+   "fieldname": "address_1",
+   "fieldtype": "Data",
+   "label": "Address 1"
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "depends_on": "eval:!doc.__islocal",
+   "fieldname": "assign_request_section",
+   "fieldtype": "Section Break",
+   "label": "Assign Request"
+  },
+  {
+   "fieldname": "assign_request_to",
+   "fieldtype": "Link",
+   "label": "Assign Franchisee",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_pzaz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_oymp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assign_installer",
+   "fieldtype": "Link",
+   "label": "Assign Installer",
+   "options": "User"
+  },
+  {
+   "fieldname": "tab_5_tab",
+   "fieldtype": "Tab Break",
+   "label": "Reports"
+  },
+  {
+   "fieldname": "job",
+   "fieldtype": "Text Editor",
+   "label": "Report Details"
+  },
+  {
+   "fieldname": "report_section",
+   "fieldtype": "Section Break",
+   "label": "Report"
+  },
+  {
+   "fieldname": "job_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Job Details"
+  },
+  {
+   "fieldname": "schedule_date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Job Schedule Date and Time"
+  },
+  {
+   "fieldname": "end_job",
+   "fieldtype": "Datetime",
+   "label": "Job End Date and Time",
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-user",
+ "idx": 5,
+ "image_field": "image",
+ "links": [],
+ "modified": "2025-01-21 16:19:12.315791",
+ "modified_by": "Administrator",
+ "module": "CRM",
+ "name": "Lead",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "permlevel": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Desk User"
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager"
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User"
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Installer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Franchisee",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "lead_name,lead_owner,status",
+ "sender_field": "email_id",
+ "sender_name_field": "lead_name",
+ "show_name_in_global_search": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "subject_field": "title"
+}

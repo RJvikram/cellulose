@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Franchisee-{YYYY}-{MM}-{####}}",
+ "creation": "2025-01-20 17:23:56.901262",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_section",
+  "full_name",
+  "phone_no",
+  "employment_type",
+  "status",
+  "column_break_vmtl",
+  "email_id",
+  "date_of_joining",
+  "role",
+  "address_section",
+  "address_line_1",
+  "city",
+  "country",
+  "column_break_idna",
+  "address_line_2",
+  "state",
+  "area_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Phone",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Small Text",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Small Text",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "area_code",
+   "fieldtype": "Data",
+   "label": "Area Code"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Link",
+   "label": "Employment Type",
+   "options": "Employment Type"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Link",
+   "label": "Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "column_break_vmtl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_idna",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-20 17:41:54.735089",
+ "modified_by": "Administrator",
+ "module": "Cellulose",
+ "name": "Franchisee Master",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name"
+}
